@@ -1,0 +1,17 @@
+body {
+    background-image: url("https://vips.org/wp-content/uploads/2017/10/comic-background-retreat.jpg") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    min-height: 100vh
+}
+
+.image {
+    max-width: 40vw;
+    min-width: 35vw;
+    max-height: 60vh;
+}
+
+.text {
+    font-family: "Dela Gothic One", cursive !important;
+}
