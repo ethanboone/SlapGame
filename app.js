@@ -20,7 +20,6 @@ function chooseCharacter() {
         </div>
     </div>
     `
-    console.log('character')
 }
 
 function selection(choice) {
@@ -32,7 +31,6 @@ function selection(choice) {
         computer = characters['wolverine']
     }
     draw()
-    console.log(chosenCharacter)
 }
 
 
@@ -72,14 +70,14 @@ function draw() {
         <div class="row">
             <div class="col-12 col-md-12 d-flex justify-content-center">
             <button class="btn btn-light" onclick="${chosenCharacter.character == 'wolverine' ? `attacks('punch')` : `attacksBatman('punch')`}">Punch</button>
-            <button class="btn btn-light" onclick="${chosenCharacter.character == 'wolverine' ? `attacks('claw')` : `attacksBatman('kick')`}">Kick</button>
-            <button class="btn btn-light" onclick="${chosenCharacter.character == 'wolverine' ? `attacks('stab')` : `attacksBatman('batarang')`}">${chosenCharacter.character == 'wolverine' ? `Claw` : `Batarang`}</button>
+            <button class="btn btn-light" onclick="${chosenCharacter.character == 'wolverine' ? `attacks('kick')` : `attacksBatman('kick')`}">Kick</button>
+            <button class="btn btn-light" onclick="${chosenCharacter.character == 'wolverine' ? `attacks('claw')` : `attacksBatman('batarang')`}">${chosenCharacter.character == 'wolverine' ? `Claw` : `Batarang`}</button>
             <button class="btn btn-light" id="special" onclick="${chosenCharacter.character == 'wolverine' ? `specialMove('wolverine')` : `specialMove('batman')`}">${chosenCharacter.character == 'wolverine' ? `Health+` : `Armor+`}</button>
             </div>
             </div>
         `
     template = element.innerHTML
-    console.log('draw')
+    endGame()
 }
 
 /*function defaultHealth() {
@@ -148,7 +146,8 @@ function endGame() {
         alert('You lost!')
         location.reload()
     }
+
 }
 
-endGame()
+
 chooseCharacter()
